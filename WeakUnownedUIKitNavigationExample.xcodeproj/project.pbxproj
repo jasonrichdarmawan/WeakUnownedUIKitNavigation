@@ -20,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9655E9472A7A25CF00DFB581 /* MRT Jakarta Navigation Use Cases-Weak or Unowned Example.drawio.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "MRT Jakarta Navigation Use Cases-Weak or Unowned Example.drawio.svg"; sourceTree = "<group>"; };
+		9655E9482A7A25D800DFB581 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		96C44E8C2A7975900071FF2E /* WeakUnownedUIKitNavigationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeakUnownedUIKitNavigationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C44E8F2A7975900071FF2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96C44E912A7975900071FF2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +50,8 @@
 		96C44E832A7975900071FF2E = {
 			isa = PBXGroup;
 			children = (
+				9655E9482A7A25D800DFB581 /* README.md */,
+				9655E9472A7A25CF00DFB581 /* MRT Jakarta Navigation Use Cases-Weak or Unowned Example.drawio.svg */,
 				96C44E8E2A7975900071FF2E /* WeakUnownedUIKitNavigationExample */,
 				96C44E8D2A7975900071FF2E /* Products */,
 			);

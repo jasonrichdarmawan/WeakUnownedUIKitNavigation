@@ -39,12 +39,10 @@ struct FeatureBView: ViewControllable {
     
     init(
         holder: NavStackHolder = NavStackHolder(),
-        publisher: Publisher = Publisher(),
         subscriber: Subscriber = Subscriber()
     ) {
         self.holder = holder
         self.subscriber = subscriber
-        publisher.subscriber = subscriber
     }
     
     var body: some View {
@@ -82,7 +80,10 @@ struct FeatureAView: ViewControllable {
     func navigateToFeatureB() -> Bool {
         guard let navigationController = holder.viewController?.navigationController else { return false }
         
-        let view = FeatureBView(publisher: publisher)
+        let subscriber = Subscriber()
+        publisher.subscriber = subscriber
+        
+        let view = FeatureBView(subscriber: subscriber)
         
         navigationController.pushViewController(view.viewController, animated: true)
         
