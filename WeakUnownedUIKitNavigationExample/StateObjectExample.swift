@@ -46,6 +46,7 @@ final class FeatureEViewModel: ObservableObject {
 struct FeatureEView: ViewControllable {
     var holder: NavStackHolder
     
+    // use @ObservedObject instead of @StateObject
     @ObservedObject var featureEViewModel: FeatureEViewModel
     
     init(holder: NavStackHolder = NavStackHolder(), featureEViewModel: FeatureEViewModel = FeatureEViewModel()) {
