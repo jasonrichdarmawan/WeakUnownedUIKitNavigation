@@ -30,6 +30,8 @@ protocol ViewControllable: View {
     
     func viewWillAppear(_ viewController: UIViewController)
     func viewDidAppear(_ viewController: UIViewController)
+    func viewWillDisappear(_ viewController: UIViewController)
+    func viewDidDisappear(_ viewController: UIViewController)
 }
 
 extension ViewControllable {
@@ -41,6 +43,8 @@ extension ViewControllable {
     
     func viewWillAppear(_ viewController: UIViewController) {}
     func viewDidAppear(_ viewController: UIViewController) {}
+    func viewWillDisappear(_ viewController: UIViewController) {}
+    func viewDidDisappear(_ viewController: UIViewController) {}
 }
 
 final class HostingController<ContentView>: UIHostingController<ContentView> where ContentView: ViewControllable {
@@ -52,5 +56,38 @@ final class HostingController<ContentView>: UIHostingController<ContentView> whe
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         rootView.viewDidAppear(self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        rootView.viewWillDisappear(self)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        rootView.viewDidDisappear(self)
+    }
+}
+
+final class NavigationController: UINavigationController {
+    let id: UUID = UUID()
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        print("\(type(of: self)) \(#function) \(id.uuidString)")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit { print("\(type(of: self)) \(#function) \(id.uuidString)") }
+    
+    var willPopHandler: (() -> Bool)?
+    
+    override func popViewController(animated: Bool) -> UIViewController? {
+        _ = willPopHandler?()
+        willPopHandler = nil
+        return super.popViewController(animated: animated)
     }
 }

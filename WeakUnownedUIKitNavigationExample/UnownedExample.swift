@@ -7,6 +7,49 @@
 
 import SwiftUI
 
+final class UnownedExampleCoordinator {
+    let id: UUID
+    
+    unowned let navigationController: UINavigationController
+    unowned var cCoordinator: FeatureCCoordinator?
+    
+    init(
+        id: UUID = UUID(),
+        navigationController: UINavigationController = NavigationController()
+    ) {
+        self.id = id
+        self.navigationController = navigationController
+        print("\(type(of: self)) \(#function) \(id.uuidString)")
+    }
+    deinit { print("\(type(of: self)) \(#function) \(id.uuidString)") }
+    
+    func enter() -> Bool {
+        let cCoordinator = FeatureCCoordinator()
+        
+        self.cCoordinator = cCoordinator
+        
+        let view = FeatureCView(coordinator: self, cCoordinator: cCoordinator)
+        
+        navigationController.pushViewController(view.viewController, animated: true)
+        
+        return true
+    }
+    
+    func next() -> Bool {
+        guard let cCoordinator else { return false }
+        
+        let dCoordinator = FeatureDCoordinator(cCoordinator: cCoordinator)
+        
+        let view = FeatureDView(coordinator: self, dCoordinator: dCoordinator)
+    
+        cCoordinator.dCoordinator = dCoordinator
+        
+        navigationController.pushViewController(view.viewController, animated: true)
+        
+        return true
+    }
+}
+
 class FeatureDCoordinator {
     let id: UUID
     
@@ -26,14 +69,18 @@ class FeatureDCoordinator {
 struct FeatureDView: ViewControllable {
     var holder: NavStackHolder
     
-    let coordinator: FeatureDCoordinator
+    let coordinator: UnownedExampleCoordinator
+    
+    let dCoordinator: FeatureDCoordinator
     
     init(
         holder: NavStackHolder = NavStackHolder(),
-        coordinator: FeatureDCoordinator = FeatureDCoordinator()
+        coordinator: UnownedExampleCoordinator = UnownedExampleCoordinator(),
+        dCoordinator: FeatureDCoordinator = FeatureDCoordinator()
     ) {
         self.holder = holder
         self.coordinator = coordinator
+        self.dCoordinator = dCoordinator
     }
     
     var body: some View {
@@ -56,11 +103,18 @@ class FeatureCCoordinator {
 struct FeatureCView: ViewControllable {
     var holder: NavStackHolder
     
-    let coordinator: FeatureCCoordinator
+    let coordinator: UnownedExampleCoordinator
     
-    init(holder: NavStackHolder = NavStackHolder(), coordinator: FeatureCCoordinator = FeatureCCoordinator()) {
+    let cCoordinator: FeatureCCoordinator
+    
+    init(
+        holder: NavStackHolder = NavStackHolder(),
+        coordinator: UnownedExampleCoordinator = UnownedExampleCoordinator(),
+        cCoordinator: FeatureCCoordinator = FeatureCCoordinator()
+    ) {
         self.holder = holder
         self.coordinator = coordinator
+        self.cCoordinator = cCoordinator
     }
     
     var body: some View {
@@ -68,7 +122,7 @@ struct FeatureCView: ViewControllable {
             Text("Feature C")
             
             Button {
-                _ = navigateToFeatureD()
+                _ = coordinator.next()
             } label: {
                 Text("Feature D")
             }
@@ -78,18 +132,5 @@ struct FeatureCView: ViewControllable {
     
     func viewWillAppear(_ viewController: UIViewController) {
         viewController.navigationController?.setNavigationBarHidden(false, animated: false)
-    }
-    
-    func navigateToFeatureD() -> Bool {
-        guard let navigationController = holder.viewController?.navigationController else { return false }
-        
-        let dCoordinator = FeatureDCoordinator(cCoordinator: coordinator)
-        coordinator.dCoordinator = dCoordinator
-        
-        let view = FeatureDView(coordinator: dCoordinator)
-        
-        navigationController.pushViewController(view.viewController, animated: true)
-        
-        return true
     }
 }
