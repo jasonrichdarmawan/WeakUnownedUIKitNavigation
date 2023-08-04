@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96A5C9CB2A7CBA8100E75DDA /* StateObjectExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5C9CA2A7CBA8100E75DDA /* StateObjectExample.swift */; };
 		96C44E902A7975900071FF2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C44E8F2A7975900071FF2E /* AppDelegate.swift */; };
 		96C44E922A7975900071FF2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C44E912A7975900071FF2E /* SceneDelegate.swift */; };
 		96C44E942A7975900071FF2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C44E932A7975900071FF2E /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		9655E9472A7A25CF00DFB581 /* MRT Jakarta Navigation Use Cases-Weak or Unowned Example.drawio.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "MRT Jakarta Navigation Use Cases-Weak or Unowned Example.drawio.svg"; sourceTree = "<group>"; };
 		9655E9482A7A25D800DFB581 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		96A5C9CA2A7CBA8100E75DDA /* StateObjectExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateObjectExample.swift; sourceTree = "<group>"; };
 		96C44E8C2A7975900071FF2E /* WeakUnownedUIKitNavigationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeakUnownedUIKitNavigationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C44E8F2A7975900071FF2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96C44E912A7975900071FF2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				96C44E9D2A7975920071FF2E /* Info.plist */,
 				96C44EA32A7975A90071FF2E /* WeakExample.swift */,
 				96C44EAB2A797D9F0071FF2E /* UnownedExample.swift */,
+				96A5C9CA2A7CBA8100E75DDA /* StateObjectExample.swift */,
 				96C44EA72A7976DA0071FF2E /* RootView.swift */,
 				96C44EA92A7977440071FF2E /* ViewControllable.swift */,
 			);
@@ -161,6 +164,7 @@
 				96C44EAC2A797D9F0071FF2E /* UnownedExample.swift in Sources */,
 				96C44E922A7975900071FF2E /* SceneDelegate.swift in Sources */,
 				96C44EA82A7976DA0071FF2E /* RootView.swift in Sources */,
+				96A5C9CB2A7CBA8100E75DDA /* StateObjectExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

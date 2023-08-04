@@ -26,6 +26,11 @@ struct RootView: ViewControllable {
             } label: {
                 Text("Unowned Example")
             }
+            Button {
+                _ = navigateToFeatureE()
+            } label: {
+                Text("State Object Example")
+            }
         }
     }
     
@@ -47,6 +52,16 @@ struct RootView: ViewControllable {
         guard let navigationController = holder.viewController?.navigationController else { return false }
         
         let view = FeatureCView()
+        
+        navigationController.pushViewController(view.viewController, animated: true)
+        
+        return true
+    }
+    
+    func navigateToFeatureE() -> Bool {
+        guard let navigationController = holder.viewController?.navigationController else { return false }
+        
+        let view = FeatureEView()
         
         navigationController.pushViewController(view.viewController, animated: true)
         

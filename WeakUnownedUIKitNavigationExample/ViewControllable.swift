@@ -29,6 +29,7 @@ protocol ViewControllable: View {
     var holder: NavStackHolder { get set }
     
     func viewWillAppear(_ viewController: UIViewController)
+    func viewDidAppear(_ viewController: UIViewController)
 }
 
 extension ViewControllable {
@@ -39,11 +40,17 @@ extension ViewControllable {
     }
     
     func viewWillAppear(_ viewController: UIViewController) {}
+    func viewDidAppear(_ viewController: UIViewController) {}
 }
 
 final class HostingController<ContentView>: UIHostingController<ContentView> where ContentView: ViewControllable {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         rootView.viewWillAppear(self)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        rootView.viewDidAppear(self)
     }
 }
