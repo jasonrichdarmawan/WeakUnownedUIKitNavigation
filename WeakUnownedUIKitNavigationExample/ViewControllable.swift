@@ -77,9 +77,7 @@ final class NavigationController: UINavigationController {
         print("\(type(of: self)) \(#function) \(id.uuidString)")
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
     
     deinit { print("\(type(of: self)) \(#function) \(id.uuidString)") }
     
