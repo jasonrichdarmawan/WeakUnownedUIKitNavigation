@@ -8,8 +8,8 @@
 import Foundation
 
 protocol Coordinator {
-    func pushViewController(_ route: NavigationRoute) -> Bool
-    func canPopViewController(_ route: NavigationRoute) -> Bool
-    func popToViewController(_ route: NavigationRoute) -> Bool
+    func showRoute(_ route: NavigationRoute) -> Bool
+    func canPopToRoute(_ route: NavigationRoute) -> Bool
+    func popToRoute(_ route: NavigationRoute) -> Bool
     func popToRootViewController(animated: Bool) -> Bool
 }

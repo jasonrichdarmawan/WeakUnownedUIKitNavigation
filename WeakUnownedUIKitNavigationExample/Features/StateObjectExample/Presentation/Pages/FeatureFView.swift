@@ -31,7 +31,7 @@ struct FeatureFView: ViewControllable {
             }
             .buttonStyle(.borderedProminent)
             Button {
-                _ = coordinator.pushViewController(StateObjectExampleRoute.FeatureG)
+                _ = coordinator.showRoute(StateObjectExampleRoute.FeatureG)
             } label: {
                 Text("Feature G")
             }

@@ -28,21 +28,21 @@ final class WeakExampleCoordinator: Coordinator {
     }
     deinit { print("\(type(of: self)) \(#function) \(id.uuidString)") }
     
-    func pushViewController(_ route: NavigationRoute) -> Bool {
+    func showRoute(_ route: NavigationRoute) -> Bool {
         if let route = route as? WeakExampleRoute {
             return pushToWeakExampleRoute(route)
         }
         return false
     }
     
-    func canPopViewController(_ route: NavigationRoute) -> Bool {
+    func canPopToRoute(_ route: NavigationRoute) -> Bool {
         if let route = route as? WeakExampleRoute {
             return canPopToWeakExampleRoute(route)
         }
         return false
     }
     
-    func popToViewController(_ route: NavigationRoute) -> Bool {
+    func popToRoute(_ route: NavigationRoute) -> Bool {
         if let route = route as? WeakExampleRoute {
             return popToWeakExampleRoute(route)
         }

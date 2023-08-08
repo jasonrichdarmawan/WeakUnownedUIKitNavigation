@@ -29,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window?.rootViewController = navigationController
         
-        _ = rootCoordinator.pushViewController(RootRoute.Root)
+        _ = rootCoordinator.showRoute(RootRoute.Root)
         
         window?.makeKeyAndVisible()
     }

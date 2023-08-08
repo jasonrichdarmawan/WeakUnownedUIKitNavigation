@@ -25,7 +25,7 @@ struct FeatureAView: ViewControllable {
             Text("Feature A")
             
             Button {
-                _ = coordinator.pushViewController(WeakExampleRoute.FeatureB)
+                _ = coordinator.showRoute(WeakExampleRoute.FeatureB)
             } label: {
                 Text("Feature B")
             }

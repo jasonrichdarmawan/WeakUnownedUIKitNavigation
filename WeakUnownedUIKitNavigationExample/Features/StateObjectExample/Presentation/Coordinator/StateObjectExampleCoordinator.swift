@@ -31,21 +31,21 @@ final class StateObjectExampleCoordinator: NSObject, Coordinator {
     }
     deinit { print("\(type(of: self)) \(#function) \(id.uuidString)") }
     
-    func pushViewController(_ route: NavigationRoute) -> Bool {
+    func showRoute(_ route: NavigationRoute) -> Bool {
         if let route = route as? StateObjectExampleRoute {
-            return pushToStateObjectExampleRoute(route)
+            return showStateObjectExampleRoute(route)
         }
         return false
     }
     
-    func canPopViewController(_ route: NavigationRoute) -> Bool {
+    func canPopToRoute(_ route: NavigationRoute) -> Bool {
         if let route = route as? StateObjectExampleRoute {
             return canPopToStateObjectExampleRoute(route)
         }
         return false
     }
     
-    func popToViewController(_ route: NavigationRoute) -> Bool {
+    func popToRoute(_ route: NavigationRoute) -> Bool {
         if let route = route as? StateObjectExampleRoute {
             return popToStateObjectExampleRoute(route)
         }
@@ -54,11 +54,10 @@ final class StateObjectExampleCoordinator: NSObject, Coordinator {
     
     func popToRootViewController(animated: Bool) -> Bool {
         navigationController.popToRootViewController(animated: animated)
-        
         return true
     }
     
-    private func pushToStateObjectExampleRoute(_ route: StateObjectExampleRoute) -> Bool {
+    private func showStateObjectExampleRoute(_ route: StateObjectExampleRoute) -> Bool {
         switch route {
         case .FeatureE:
             guard featureEViewController == nil else { return false }
@@ -71,6 +70,8 @@ final class StateObjectExampleCoordinator: NSObject, Coordinator {
             featureEViewController = viewController
             
             navigationController.pushViewController(viewController, animated: true)
+            
+            return self.showRoute(StateObjectExampleRoute.FeatureF)
         case .FeatureF:
             guard featureFViewController == nil else { return false }
             
@@ -94,6 +95,8 @@ final class StateObjectExampleCoordinator: NSObject, Coordinator {
             guard let navigationController = navigationController as? NavigationController else { return false }
             
             navigationController.willPopHandler = { navigationController.dismiss(animated: false) }
+            
+            return true
         case .FeatureG:
             guard featureGViewController == nil else { return false }
             
@@ -104,6 +107,8 @@ final class StateObjectExampleCoordinator: NSObject, Coordinator {
             if featureFViewController != nil { navigationController.dismiss(animated: true) }
             
             navigationController.pushViewController(viewController, animated: true)
+            
+            return true
         case .FeatureH:
             guard featureHViewController == nil else { return false }
             
@@ -112,9 +117,9 @@ final class StateObjectExampleCoordinator: NSObject, Coordinator {
             featureHViewController = viewController
             
             navigationController.pushViewController(viewController, animated: true)
+            
+            return true
         }
-        
-        return true
     }
     
     private func canPopToStateObjectExampleRoute(_ route: StateObjectExampleRoute) -> Bool {
@@ -150,7 +155,6 @@ final class StateObjectExampleCoordinator: NSObject, Coordinator {
 
 extension StateObjectExampleCoordinator: UISheetPresentationControllerDelegate {
     func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-        print("hello")
         navigationController.popViewController(animated: true)
     }
 }

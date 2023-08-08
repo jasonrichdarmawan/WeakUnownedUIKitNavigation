@@ -28,21 +28,21 @@ final class UnownedExampleCoordinator: Coordinator {
     }
     deinit { print("\(type(of: self)) \(#function) \(id.uuidString)") }
     
-    func pushViewController(_ route: NavigationRoute) -> Bool {
+    func showRoute(_ route: NavigationRoute) -> Bool {
         if let route = route as? UnownedExampleRoute {
             return pushToUnownedExampleRoute(route)
         }
         return false
     }
     
-    func canPopViewController(_ route: NavigationRoute) -> Bool {
+    func canPopToRoute(_ route: NavigationRoute) -> Bool {
         if let route = route as? UnownedExampleRoute {
             return canPopToUnownedExampleRoute(route)
         }
         return false
     }
     
-    func popToViewController(_ route: NavigationRoute) -> Bool {
+    func popToRoute(_ route: NavigationRoute) -> Bool {
         if let route = route as? UnownedExampleRoute {
             return popToUnownedExampleRoute(route)
         }

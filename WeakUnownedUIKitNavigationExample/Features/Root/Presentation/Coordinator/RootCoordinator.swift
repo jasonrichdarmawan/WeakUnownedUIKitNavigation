@@ -27,21 +27,21 @@ final class RootCoordinator: Coordinator {
     }
     deinit { print("\(type(of: self)) \(#function) \(id.uuidString)") }
     
-    func pushViewController(_ route: NavigationRoute) -> Bool {
+    func showRoute(_ route: NavigationRoute) -> Bool {
         if let route = route as? RootRoute {
             return pushToRootRoute(route)
         }
         return false
     }
     
-    func canPopViewController(_ route: NavigationRoute) -> Bool {
+    func canPopToRoute(_ route: NavigationRoute) -> Bool {
         if let route = route as? RootRoute {
             return canPopToRootRoute(route)
         }
         return false
     }
     
-    func popToViewController(_ route: NavigationRoute) -> Bool {
+    func popToRoute(_ route: NavigationRoute) -> Bool {
         if let route = route as? RootRoute {
             return popToRootRoute(route)
         }
@@ -72,21 +72,21 @@ final class RootCoordinator: Coordinator {
             let coordinator = WeakExampleCoordinator(navigationController: navigationController)
             weakCoordinator = coordinator
             
-            return coordinator.pushViewController(WeakExampleRoute.FeatureA)
+            return coordinator.showRoute(WeakExampleRoute.FeatureA)
         case .FeatureC:
             guard unownedCoordinator == nil else { return false }
             
             let coordinator = UnownedExampleCoordinator(navigationController: navigationController)
             unownedCoordinator = coordinator
             
-            return coordinator.pushViewController(UnownedExampleRoute.FeatureC)
+            return coordinator.showRoute(UnownedExampleRoute.FeatureC)
         case .FeatureE:
             guard stateObjectCoordinator == nil else { return false }
             
             let coordinator = StateObjectExampleCoordinator(navigationController: navigationController)
             stateObjectCoordinator = coordinator
             
-            return coordinator.pushViewController(StateObjectExampleRoute.FeatureE)
+            return coordinator.showRoute(StateObjectExampleRoute.FeatureE)
         }
     }
     
@@ -113,13 +113,13 @@ final class RootCoordinator: Coordinator {
             return true
         case .FeatureA:
             guard let weakCoordinator else { return false }
-            return weakCoordinator.popToViewController(WeakExampleRoute.FeatureA)
+            return weakCoordinator.popToRoute(WeakExampleRoute.FeatureA)
         case .FeatureC:
             guard let unownedCoordinator else { return false }
-            return unownedCoordinator.popToViewController(UnownedExampleRoute.FeatureC)
+            return unownedCoordinator.popToRoute(UnownedExampleRoute.FeatureC)
         case .FeatureE:
             guard let stateObjectCoordinator else { return false }
-            return stateObjectCoordinator.popToViewController(StateObjectExampleRoute.FeatureE)
+            return stateObjectCoordinator.popToRoute(StateObjectExampleRoute.FeatureE)
         }
     }
 }

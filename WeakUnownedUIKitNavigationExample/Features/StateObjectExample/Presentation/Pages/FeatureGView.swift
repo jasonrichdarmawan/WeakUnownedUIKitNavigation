@@ -18,7 +18,7 @@ struct FeatureGView: ViewControllable {
         VStack {
             Text("Feature G")
             Button {
-                _ = coordinator.pushViewController(StateObjectExampleRoute.FeatureH)
+                _ = coordinator.showRoute(StateObjectExampleRoute.FeatureH)
             } label: {
                 Text("Go to Feature H")
             }

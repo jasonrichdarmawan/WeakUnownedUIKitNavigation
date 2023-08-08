@@ -19,17 +19,17 @@ struct RootView: ViewControllable {
     var body: some View {
         List {
             Button {
-                _ = coordinator.pushViewController(RootRoute.FeatureA)
+                _ = coordinator.showRoute(RootRoute.FeatureA)
             } label: {
                 Text("Weak Example")
             }
             Button {
-                _ = coordinator.pushViewController(RootRoute.FeatureC)
+                _ = coordinator.showRoute(RootRoute.FeatureC)
             } label: {
                 Text("Unowned Example")
             }
             Button {
-                _ = coordinator.pushViewController(RootRoute.FeatureE)
+                _ = coordinator.showRoute(RootRoute.FeatureE)
             } label: {
                 Text("State Object Example")
             }

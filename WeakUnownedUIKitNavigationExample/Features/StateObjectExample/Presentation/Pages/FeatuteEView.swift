@@ -39,8 +39,4 @@ struct FeatureEView: ViewControllable {
     func viewWillAppear(_ viewController: UIViewController) {
         viewController.navigationController?.setNavigationBarHidden(false, animated: true)
     }
-    
-    func viewDidAppear(_ viewController: UIViewController) {
-        _ = coordinator.pushViewController(StateObjectExampleRoute.FeatureF)
-    }
 }
