@@ -4,4 +4,6 @@
 
 # To Do
 
-- [ ] generic Coordinator.
+- [x] generic Coordinator.
+
+    ![Coordinator](./Reference%20In%20Swift-Coordinator.drawio.svg)

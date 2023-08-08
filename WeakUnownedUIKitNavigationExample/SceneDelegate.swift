@@ -11,7 +11,7 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var navigationController: UINavigationController?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -21,15 +21,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         
-        let navigationController = NavigationController()
+        navigationController = NavigationController()
+        
+        guard let navigationController else { return }
         
         let rootCoordinator = RootCoordinator(navigationController: navigationController)
         
-        window?.rootViewController = rootCoordinator.navigationController
+        window?.rootViewController = navigationController
+        
+        _ = rootCoordinator.pushViewController(RootRoute.Root)
         
         window?.makeKeyAndVisible()
-        
-        _ = rootCoordinator.enter()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
