@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "5A4A6F97-DB99-42ED-A03D-1BD6E2722677"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96DC5E2C-C5BB-4AFB-B5F5-800F3F1D200C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeakUnownedUIKitNavigationExample/Features/StateObjectExample/Presentation/Pages/FeatureFView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CCC293D0-3E4C-410D-BEDE-C4C22F0EB977"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeakUnownedUIKitNavigationExample/Features/StateObjectExample/Presentation/Pages/FeatureFView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "CCC293D0-3E4C-410D-BEDE-C4C22F0EB977 - f439480755c74913"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeakUnownedUIKitNavigationExample.FeatureIView.body.getter : some"
+                  moduleName = "WeakUnownedUIKitNavigationExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jason/Documents/Work/NC3/WeakUnownedUIKitNavigationExample/WeakUnownedUIKitNavigationExample/Features/StateObjectExample/Presentation/Pages/FeatureFView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "CCC293D0-3E4C-410D-BEDE-C4C22F0EB977 - e5047c0ce0add0e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;WeakUnownedUIKitNavigationExample.Station&gt;, Swift.String, &lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0&gt;&gt; in WeakUnownedUIKitNavigationExample.FeatureIView.body.getter : some"
+                  moduleName = "WeakUnownedUIKitNavigationExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jason/Documents/Work/NC3/WeakUnownedUIKitNavigationExample/WeakUnownedUIKitNavigationExample/Features/StateObjectExample/Presentation/Pages/FeatureFView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

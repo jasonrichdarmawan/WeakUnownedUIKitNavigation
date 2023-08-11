@@ -18,8 +18,10 @@ final class StateObjectExampleCoordinator: NSObject, Coordinator {
     weak private var featureFViewController: UIViewController?
     
     weak private var featureGViewController: UIViewController?
+    weak private var featureGViewModel: FeatureGViewModel?
     
     weak private var featureHViewController: UIViewController?
+    weak private var featureHViewModel: FeatureHViewModel?
     
     init(
         id: UUID = UUID(),
@@ -62,10 +64,10 @@ final class StateObjectExampleCoordinator: NSObject, Coordinator {
         case .FeatureE:
             guard featureEViewController == nil else { return false }
             
-            let viewModel = FeatureEViewModel()
+            let viewModel = FeatureEViewModel(coordinator: self)
             featureEViewModel = viewModel
             
-            let view = FeatureEView(coordinator: self, featureEViewModel: viewModel)
+            let view = FeatureEView(featureEViewModel: viewModel)
             let viewController = HostingController(rootView: view)
             featureEViewController = viewController
             
@@ -77,7 +79,7 @@ final class StateObjectExampleCoordinator: NSObject, Coordinator {
             
             guard let featureEViewModel else { return false }
             
-            let view = FeatureFView(coordinator: self, featureEViewModel: featureEViewModel)
+            let view = FeatureFView(featureEViewModel: featureEViewModel)
             let viewController = HostingController(rootView: view)
             featureFViewController = viewController
             
@@ -100,7 +102,10 @@ final class StateObjectExampleCoordinator: NSObject, Coordinator {
         case .FeatureG:
             guard featureGViewController == nil else { return false }
             
-            let view = FeatureGView(coordinator: self)
+            let viewModel = FeatureGViewModel(coordinator: self)
+            featureGViewModel = viewModel
+            
+            let view = FeatureGView(featureGViewModel: viewModel)
             let viewController = HostingController(rootView: view)
             featureGViewController = viewController
             
@@ -112,7 +117,10 @@ final class StateObjectExampleCoordinator: NSObject, Coordinator {
         case .FeatureH:
             guard featureHViewController == nil else { return false }
             
-            let view = FeatureHView(coordinator: self)
+            let viewModel = FeatureHViewModel(coordinator: self)
+            featureHViewModel = viewModel
+            
+            let view = FeatureHView(featureHViewModel: viewModel)
             let viewController = HostingController(rootView: view)
             featureHViewController = viewController
             

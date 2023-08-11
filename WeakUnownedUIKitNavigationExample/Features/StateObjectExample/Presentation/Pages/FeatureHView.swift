@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct FeatureHView: ViewControllable {
-    let coordinator: Coordinator
+    @ObservedObject var featureHViewModel: FeatureHViewModel
     
-    init(coordinator: Coordinator = StateObjectExampleCoordinator()) {
-        self.coordinator = coordinator
+    init(featureHViewModel: FeatureHViewModel) {
+        self.featureHViewModel = featureHViewModel
     }
     
     var body: some View {
         VStack {
             Text("Feature H")
             Button {
-                _ = coordinator.popToRootViewController(animated: true)
+                _ = featureHViewModel.popToRootViewController(animated: true)
             } label: {
                 Text("pop to root")
             }

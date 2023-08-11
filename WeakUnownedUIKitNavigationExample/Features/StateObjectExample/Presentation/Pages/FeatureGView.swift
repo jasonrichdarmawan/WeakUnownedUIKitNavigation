@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct FeatureGView: ViewControllable {
-    let coordinator: Coordinator
+    @ObservedObject var featureGViewModel: FeatureGViewModel
     
-    init(coordinator: Coordinator = StateObjectExampleCoordinator()) {
-        self.coordinator = coordinator
+    init(featureGViewModel: FeatureGViewModel) {
+        self.featureGViewModel = featureGViewModel
     }
     
     var body: some View {
         VStack {
             Text("Feature G")
             Button {
-                _ = coordinator.showRoute(StateObjectExampleRoute.FeatureH)
+                _ = featureGViewModel.showRoute()
             } label: {
                 Text("Go to Feature H")
             }

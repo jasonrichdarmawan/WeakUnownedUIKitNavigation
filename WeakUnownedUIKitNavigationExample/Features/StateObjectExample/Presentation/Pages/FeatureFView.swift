@@ -8,15 +8,9 @@
 import SwiftUI
 
 struct FeatureFView: ViewControllable {
-    let coordinator: Coordinator
-    
     @ObservedObject var featureEViewModel: FeatureEViewModel
     
-    init(
-        coordinator: Coordinator = StateObjectExampleCoordinator(),
-        featureEViewModel: FeatureEViewModel = FeatureEViewModel()
-    ) {
-        self.coordinator = coordinator
+    init(featureEViewModel: FeatureEViewModel) {
         self.featureEViewModel = featureEViewModel
     }
     
@@ -31,7 +25,7 @@ struct FeatureFView: ViewControllable {
             }
             .buttonStyle(.borderedProminent)
             Button {
-                _ = coordinator.showRoute(StateObjectExampleRoute.FeatureG)
+                _ = featureEViewModel.showRoute()
             } label: {
                 Text("Feature G")
             }

@@ -1,28 +1,24 @@
 //
-//  FeatureEViewModel.swift
+//  FeatureGViewModel.swift
 //  WeakUnownedUIKitNavigationExample
 //
-//  Created by Jason Rich Darmawan Onggo Putra on 08/08/23.
+//  Created by Jason Rich Darmawan Onggo Putra on 11/08/23.
 //
 
-import SwiftUI
+import Foundation
 
-final class FeatureEViewModel: ObservableObject {
+final class FeatureGViewModel: ObservableObject {
     private let id: UUID
-    
     private var coordinator: Coordinator
     
-    @Published var count: Int
-    
-    init(id: UUID = UUID(), coordinator: Coordinator, count: Int = 0) {
+    init(id: UUID = UUID(), coordinator: Coordinator) {
         self.id = id
         self.coordinator = coordinator
-        self.count = count
         print("\(type(of: self)) \(#function) \(id.uuidString)")
     }
     deinit { print("\(type(of: self)) \(#function) \(id.uuidString)") }
     
     func showRoute() -> Bool {
-        return coordinator.showRoute(StateObjectExampleRoute.FeatureG)
+        return coordinator.showRoute(StateObjectExampleRoute.FeatureH)
     }
 }

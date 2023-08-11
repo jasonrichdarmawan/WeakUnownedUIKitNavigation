@@ -41,6 +41,8 @@
 		96C44E992A7975920071FF2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96C44E982A7975920071FF2E /* Assets.xcassets */; };
 		96C44E9C2A7975920071FF2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C44E9A2A7975920071FF2E /* LaunchScreen.storyboard */; };
 		96C44EA82A7976DA0071FF2E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C44EA72A7976DA0071FF2E /* RootView.swift */; };
+		96F2EC862A868CBB00058A0D /* FeatureGViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2EC852A868CBB00058A0D /* FeatureGViewModel.swift */; };
+		96F2EC882A868D6000058A0D /* FeatureHViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2EC872A868D6000058A0D /* FeatureHViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		96C44E9B2A7975920071FF2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96C44E9D2A7975920071FF2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96C44EA72A7976DA0071FF2E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		96F2EC852A868CBB00058A0D /* FeatureGViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureGViewModel.swift; sourceTree = "<group>"; };
+		96F2EC872A868D6000058A0D /* FeatureHViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureHViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +304,8 @@
 			isa = PBXGroup;
 			children = (
 				96BB00DA2A82438F00073134 /* FeatureEViewModel.swift */,
+				96F2EC852A868CBB00058A0D /* FeatureGViewModel.swift */,
+				96F2EC872A868D6000058A0D /* FeatureHViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -427,7 +433,9 @@
 				96BB00922A820F9600073134 /* NavigationController.swift in Sources */,
 				96BB00992A820FE000073134 /* NavigationRoute.swift in Sources */,
 				96BB00DB2A82438F00073134 /* FeatureEViewModel.swift in Sources */,
+				96F2EC862A868CBB00058A0D /* FeatureGViewModel.swift in Sources */,
 				96BB00AF2A8239E200073134 /* Subscriber.swift in Sources */,
+				96F2EC882A868D6000058A0D /* FeatureHViewModel.swift in Sources */,
 				96C44E922A7975900071FF2E /* SceneDelegate.swift in Sources */,
 				96C44EA82A7976DA0071FF2E /* RootView.swift in Sources */,
 				96BB00B82A823A5E00073134 /* WeakExampleRoute.swift in Sources */,

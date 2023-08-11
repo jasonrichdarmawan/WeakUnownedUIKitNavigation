@@ -8,16 +8,12 @@
 import SwiftUI
 
 struct FeatureEView: ViewControllable {
-    let coordinator: Coordinator
-    
     // use @ObservedObject instead of @StateObject
     @ObservedObject var featureEViewModel: FeatureEViewModel
     
     init(
-        coordinator: Coordinator = StateObjectExampleCoordinator(),
-        featureEViewModel: FeatureEViewModel = FeatureEViewModel()
+        featureEViewModel: FeatureEViewModel
     ) {
-        self.coordinator = coordinator
         self.featureEViewModel = featureEViewModel
     }
     
