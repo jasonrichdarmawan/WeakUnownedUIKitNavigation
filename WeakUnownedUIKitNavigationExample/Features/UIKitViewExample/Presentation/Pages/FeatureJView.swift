@@ -28,7 +28,7 @@ final class FeatureJView: UIView {
     
     required init?(coder: NSCoder) {
         id = UUID()
-        let controller = FeatureJViewController()
+        let controller = UIViewController()
         self.controller = controller
         
         super.init(coder: coder)

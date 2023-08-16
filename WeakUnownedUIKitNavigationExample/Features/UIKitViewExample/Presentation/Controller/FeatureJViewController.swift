@@ -15,7 +15,7 @@ final class FeatureJViewController: UIViewController {
     
     private weak var featureIVM: FeatureIViewModel?
     
-    init(id: UUID = UUID(), featureIVM: FeatureIViewModel? = nil) {
+    init(id: UUID = UUID(), featureIVM: FeatureIViewModel) {
         self.id = id
         self.featureIVM = featureIVM
         

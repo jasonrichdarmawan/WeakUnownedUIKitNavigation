@@ -153,6 +153,7 @@
 		96BB009C2A82100600073134 /* WeakExample */ = {
 			isa = PBXGroup;
 			children = (
+				96BB00A92A8239A300073134 /* Coordinator */,
 				96BB00A82A82399E00073134 /* Presentation */,
 			);
 			path = WeakExample;
@@ -161,6 +162,7 @@
 		96BB009D2A82100C00073134 /* UnownedExample */ = {
 			isa = PBXGroup;
 			children = (
+				96BB00BB2A823B7700073134 /* Coordinator */,
 				96BB00BA2A823B7200073134 /* Presentation */,
 			);
 			path = UnownedExample;
@@ -169,6 +171,7 @@
 		96BB009E2A82101100073134 /* StateObjectExample */ = {
 			isa = PBXGroup;
 			children = (
+				96BB00CD2A82422900073134 /* Coordinator */,
 				96BB00CC2A82422200073134 /* Presentation */,
 			);
 			path = StateObjectExample;
@@ -177,6 +180,7 @@
 		96BB009F2A82101700073134 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				96BB00A22A8210DB00073134 /* Coordinator */,
 				96BB00A02A8210C900073134 /* Presentation */,
 			);
 			path = Root;
@@ -185,7 +189,6 @@
 		96BB00A02A8210C900073134 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				96BB00A22A8210DB00073134 /* Coordinator */,
 				96BB00A12A8210CE00073134 /* Pages */,
 			);
 			path = Presentation;
@@ -213,7 +216,6 @@
 			children = (
 				96BB00AD2A8239D200073134 /* ViewModels */,
 				96BB00AA2A8239BC00073134 /* Pages */,
-				96BB00A92A8239A300073134 /* Coordinator */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -250,7 +252,6 @@
 			children = (
 				96BB00C12A8240F700073134 /* Pages */,
 				96BB00BE2A8240DE00073134 /* ViewModels */,
-				96BB00BB2A823B7700073134 /* Coordinator */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -285,7 +286,6 @@
 		96BB00CC2A82422200073134 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				96BB00CD2A82422900073134 /* Coordinator */,
 				96BB00D92A82438700073134 /* ViewModels */,
 				96BB00CE2A82422E00073134 /* Pages */,
 			);
@@ -376,6 +376,7 @@
 		96F2EC902A8AABFA00058A0D /* UIKitViewExample */ = {
 			isa = PBXGroup;
 			children = (
+				96F2EC952A8AAFBB00058A0D /* Coordinator */,
 				96F2EC962A8AAFC700058A0D /* Presentation */,
 			);
 			path = UIKitViewExample;
@@ -393,7 +394,6 @@
 		96F2EC962A8AAFC700058A0D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				96F2EC952A8AAFBB00058A0D /* Coordinator */,
 				96F1BDA92A8C8FB1002C7708 /* ViewModels */,
 				96F1BDAC2A8C9B3E002C7708 /* Controller */,
 				96F2EC972A8AAFCD00058A0D /* Pages */,

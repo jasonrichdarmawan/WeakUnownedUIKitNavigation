@@ -44,6 +44,8 @@ final class UIKitViewExampleCoordinator: NSObject, Coordinator {
 
             return showUIKitViewExampleRoute(UIKitViewExampleRoute.FeatureJ)
         case .FeatureJ:
+            guard let featureIVM = featureIVM else { return false }
+            
             let viewController = FeatureJViewController(featureIVM: featureIVM)
             featureJVC = viewController
             
