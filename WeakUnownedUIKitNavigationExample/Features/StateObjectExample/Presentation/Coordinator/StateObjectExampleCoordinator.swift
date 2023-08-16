@@ -73,7 +73,7 @@ final class StateObjectExampleCoordinator: NSObject, Coordinator {
             
             navigationController.pushViewController(viewController, animated: true)
             
-            return self.showRoute(StateObjectExampleRoute.FeatureF)
+            return self.showStateObjectExampleRoute(StateObjectExampleRoute.FeatureF)
         case .FeatureF:
             guard featureFViewController == nil else { return false }
             

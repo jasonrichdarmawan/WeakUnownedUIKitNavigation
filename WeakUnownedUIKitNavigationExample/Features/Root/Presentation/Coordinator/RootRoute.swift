@@ -12,4 +12,5 @@ enum RootRoute: NavigationRoute {
     case FeatureA
     case FeatureC
     case FeatureE
+    case FeatureI
 }

@@ -33,6 +33,11 @@ struct RootView: ViewControllable {
             } label: {
                 Text("State Object Example")
             }
+            Button {
+                _ = coordinator.showRoute(RootRoute.FeatureI)
+            } label: {
+                Text("UIKit View Example")
+            }
         }
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96A5693D2A8B665E0076F88D /* UIKitViewExampleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5693B2A8B653E0076F88D /* UIKitViewExampleCoordinator.swift */; };
 		96BB00922A820F9600073134 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BB00912A820F9600073134 /* NavigationController.swift */; };
 		96BB00942A820FA400073134 /* ViewControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BB00932A820FA400073134 /* ViewControllable.swift */; };
 		96BB00962A820FB600073134 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BB00952A820FB600073134 /* HostingController.swift */; };
@@ -40,13 +41,19 @@
 		96C44E992A7975920071FF2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96C44E982A7975920071FF2E /* Assets.xcassets */; };
 		96C44E9C2A7975920071FF2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C44E9A2A7975920071FF2E /* LaunchScreen.storyboard */; };
 		96C44EA82A7976DA0071FF2E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C44EA72A7976DA0071FF2E /* RootView.swift */; };
+		96F1BDA82A8C8F26002C7708 /* FeatureIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F1BDA72A8C8F26002C7708 /* FeatureIView.swift */; };
+		96F1BDAB2A8C8FBA002C7708 /* FeatureIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F1BDAA2A8C8FBA002C7708 /* FeatureIViewModel.swift */; };
 		96F2EC862A868CBB00058A0D /* FeatureGViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2EC852A868CBB00058A0D /* FeatureGViewModel.swift */; };
 		96F2EC882A868D6000058A0D /* FeatureHViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2EC872A868D6000058A0D /* FeatureHViewModel.swift */; };
+		96F2EC942A8AAEB700058A0D /* UIKitViewExampleRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2EC932A8AAEB700058A0D /* UIKitViewExampleRoute.swift */; };
+		96F2EC992A8AAFD600058A0D /* FeatureJViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2EC982A8AAFD600058A0D /* FeatureJViewController.swift */; };
+		96F2EC9B2A8B42FC00058A0D /* FeatureJView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2EC9A2A8B42FC00058A0D /* FeatureJView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9655E9472A7A25CF00DFB581 /* MRT Jakarta Navigation Use Cases-Weak or Unowned Example.drawio.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "MRT Jakarta Navigation Use Cases-Weak or Unowned Example.drawio.svg"; sourceTree = "<group>"; };
 		9655E9482A7A25D800DFB581 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		96A5693B2A8B653E0076F88D /* UIKitViewExampleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViewExampleCoordinator.swift; sourceTree = "<group>"; };
 		96BB00912A820F9600073134 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		96BB00932A820FA400073134 /* ViewControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllable.swift; sourceTree = "<group>"; };
 		96BB00952A820FB600073134 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
@@ -82,9 +89,14 @@
 		96C44E9B2A7975920071FF2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96C44E9D2A7975920071FF2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96C44EA72A7976DA0071FF2E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		96F1BDA72A8C8F26002C7708 /* FeatureIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureIView.swift; sourceTree = "<group>"; };
+		96F1BDAA2A8C8FBA002C7708 /* FeatureIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureIViewModel.swift; sourceTree = "<group>"; };
 		96F2EC852A868CBB00058A0D /* FeatureGViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureGViewModel.swift; sourceTree = "<group>"; };
 		96F2EC872A868D6000058A0D /* FeatureHViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureHViewModel.swift; sourceTree = "<group>"; };
 		96F2EC892A869A7F00058A0D /* Reference In Swift-Coordinator.drawio.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Reference In Swift-Coordinator.drawio.svg"; sourceTree = "<group>"; };
+		96F2EC932A8AAEB700058A0D /* UIKitViewExampleRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViewExampleRoute.swift; sourceTree = "<group>"; };
+		96F2EC982A8AAFD600058A0D /* FeatureJViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureJViewController.swift; sourceTree = "<group>"; };
+		96F2EC9A2A8B42FC00058A0D /* FeatureJView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureJView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +117,7 @@
 				96BB009C2A82100600073134 /* WeakExample */,
 				96BB009D2A82100C00073134 /* UnownedExample */,
 				96BB009E2A82101100073134 /* StateObjectExample */,
+				96F2EC902A8AABFA00058A0D /* UIKitViewExample */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -344,6 +357,59 @@
 			path = WeakUnownedUIKitNavigationExample;
 			sourceTree = "<group>";
 		};
+		96F1BDA92A8C8FB1002C7708 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				96F1BDAA2A8C8FBA002C7708 /* FeatureIViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		96F1BDAC2A8C9B3E002C7708 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				96F2EC982A8AAFD600058A0D /* FeatureJViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		96F2EC902A8AABFA00058A0D /* UIKitViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				96F2EC962A8AAFC700058A0D /* Presentation */,
+			);
+			path = UIKitViewExample;
+			sourceTree = "<group>";
+		};
+		96F2EC952A8AAFBB00058A0D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				96F2EC932A8AAEB700058A0D /* UIKitViewExampleRoute.swift */,
+				96A5693B2A8B653E0076F88D /* UIKitViewExampleCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		96F2EC962A8AAFC700058A0D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				96F2EC952A8AAFBB00058A0D /* Coordinator */,
+				96F1BDA92A8C8FB1002C7708 /* ViewModels */,
+				96F1BDAC2A8C9B3E002C7708 /* Controller */,
+				96F2EC972A8AAFCD00058A0D /* Pages */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		96F2EC972A8AAFCD00058A0D /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				96F1BDA72A8C8F26002C7708 /* FeatureIView.swift */,
+				96F2EC9A2A8B42FC00058A0D /* FeatureJView.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -415,7 +481,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96A5693D2A8B665E0076F88D /* UIKitViewExampleCoordinator.swift in Sources */,
+				96F2EC992A8AAFD600058A0D /* FeatureJViewController.swift in Sources */,
 				96BB00B12A8239EF00073134 /* Publisher.swift in Sources */,
+				96F1BDAB2A8C8FBA002C7708 /* FeatureIViewModel.swift in Sources */,
 				96BB00B42A823A0C00073134 /* FeatureBView.swift in Sources */,
 				96BB00942A820FA400073134 /* ViewControllable.swift in Sources */,
 				96BB009B2A820FEA00073134 /* Coordinator.swift in Sources */,
@@ -435,12 +504,15 @@
 				96BB00AF2A8239E200073134 /* Subscriber.swift in Sources */,
 				96F2EC882A868D6000058A0D /* FeatureHViewModel.swift in Sources */,
 				96C44E922A7975900071FF2E /* SceneDelegate.swift in Sources */,
+				96F2EC9B2A8B42FC00058A0D /* FeatureJView.swift in Sources */,
 				96C44EA82A7976DA0071FF2E /* RootView.swift in Sources */,
 				96BB00B82A823A5E00073134 /* WeakExampleRoute.swift in Sources */,
 				96BB00962A820FB600073134 /* HostingController.swift in Sources */,
 				96BB00C02A8240E600073134 /* FeatureDCoordinator.swift in Sources */,
+				96F2EC942A8AAEB700058A0D /* UIKitViewExampleRoute.swift in Sources */,
 				96BB00D02A82424800073134 /* StateObjectExampleCoordinator.swift in Sources */,
 				96BB00B62A823A2200073134 /* FeatureAView.swift in Sources */,
+				96F1BDA82A8C8F26002C7708 /* FeatureIView.swift in Sources */,
 				96BB00D42A82428C00073134 /* FeatureGView.swift in Sources */,
 				96BB00DD2A8243A300073134 /* FeatuteEView.swift in Sources */,
 				96BB00C32A8240FE00073134 /* FeatureDView.swift in Sources */,

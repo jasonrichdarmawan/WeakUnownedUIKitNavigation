@@ -16,6 +16,7 @@ final class RootCoordinator: Coordinator {
     weak private var weakCoordinator: WeakExampleCoordinator?
     weak private var unownedCoordinator: UnownedExampleCoordinator?
     weak private var stateObjectCoordinator: StateObjectExampleCoordinator?
+    weak private var uiKitViewExampleCoordinator: UIKitViewExampleCoordinator?
     
     init(
         id: UUID = UUID(),
@@ -87,6 +88,13 @@ final class RootCoordinator: Coordinator {
             stateObjectCoordinator = coordinator
             
             return coordinator.showRoute(StateObjectExampleRoute.FeatureE)
+        case .FeatureI:
+            guard uiKitViewExampleCoordinator == nil else { return false }
+            
+            let coordinator = UIKitViewExampleCoordinator(navigationController: navigationController)
+            uiKitViewExampleCoordinator = coordinator
+            
+            return coordinator.showRoute(UIKitViewExampleRoute.FeatureI)
         }
     }
     
@@ -100,6 +108,8 @@ final class RootCoordinator: Coordinator {
             if unownedCoordinator == nil { return false }
         case .FeatureE:
             if stateObjectCoordinator == nil { return false }
+        case .FeatureI:
+            if uiKitViewExampleCoordinator == nil { return false }
         }
         
         return true
@@ -120,6 +130,9 @@ final class RootCoordinator: Coordinator {
         case .FeatureE:
             guard let stateObjectCoordinator else { return false }
             return stateObjectCoordinator.popToRoute(StateObjectExampleRoute.FeatureE)
+        case .FeatureI:
+            guard let uiKitViewExampleCoordinator else { return false }
+            return uiKitViewExampleCoordinator.popToRoute(UIKitViewExampleRoute.FeatureI)
         }
     }
 }

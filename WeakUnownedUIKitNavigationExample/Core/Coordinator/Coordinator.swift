@@ -13,3 +13,10 @@ protocol Coordinator {
     func popToRoute(_ route: NavigationRoute) -> Bool
     func popToRootViewController(animated: Bool) -> Bool
 }
+
+extension Coordinator {
+    func showRoute(_ route: NavigationRoute) -> Bool { return false }
+    func canPopToRoute(_ route: NavigationRoute) -> Bool { return false }
+    func popToRoute(_ route: NavigationRoute) -> Bool { return false }
+    func popToRootViewController(animated: Bool) -> Bool { return false }
+}

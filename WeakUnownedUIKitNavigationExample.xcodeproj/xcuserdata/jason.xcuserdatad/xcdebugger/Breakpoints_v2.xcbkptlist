@@ -63,6 +63,21 @@
                   endingLineNumber = "35"
                   offsetFromSymbolStart = "112">
                </Location>
+               <Location
+                  uuid = "CCC293D0-3E4C-410D-BEDE-C4C22F0EB977 - d0c95ca7b342272d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.buttonStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PrimitiveButtonStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.buttonStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PrimitiveButtonStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt; in WeakUnownedUIKitNavigationExample.FeatureFView.body.getter : some"
+                  moduleName = "WeakUnownedUIKitNavigationExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jason/Documents/Work/NC3/WeakUnownedUIKitNavigationExample/WeakUnownedUIKitNavigationExample/Features/StateObjectExample/Presentation/Pages/FeatureFView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "36">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
